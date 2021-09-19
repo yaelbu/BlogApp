@@ -1,6 +1,7 @@
 <div style="margin-left:20px;" class="row">
     <div class="col-md-6"></div>
-    <h1 style="color:#2e2d5e;margin-bottom: 40px; font-family: Cambria; font-style: italic;">Post Add</h1>
+    <h1 *ngIf="editMode === false" style="color:#2e2d5e;margin-bottom: 40px; font-family: Cambria; font-style: italic;">Post Add</h1>
+    <h1 *ngIf="editMode === true" style="color:#2e2d5e;margin-bottom: 40px; font-family: Cambria; font-style: italic;">Post Edit</h1>
     <form style="margin-left:20px;" [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label>Title</label>
@@ -15,7 +16,7 @@
         <div class="form-group">
             <label>Image Path</label>
             <input class="form-control" formControlName="imagePath" style="width: 25%;" type="text"/>
-            <img src="{{form.value.imagePath}}"/>
+            <img style="height: 165px;" src="{{form.value.imagePath}}"/>
         </div>
 
         <button class="btn btn-success" [disabled]="form.invalid" type="submit">Save</button> | 
