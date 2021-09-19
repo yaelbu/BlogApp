@@ -9,6 +9,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
 import { PostEditComponent } from './post-edit/post-edit.component';
+import { FormGroupDirective, ReactiveFormsModule } from '@angular/forms';
 
 
 const routes:Routes=[
@@ -42,7 +43,9 @@ const routes:Routes=[
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
