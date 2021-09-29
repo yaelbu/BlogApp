@@ -14,7 +14,21 @@
   </p>
   <img style="width: 1050px" src="{{ post?.imagePath }}" />
   <p style="font-family: Cambria; color: #2e2d5e">{{ post?.author }}</p>
-  <p style="font-family: Cambria; color: #2e2d5e">{{ post?.datePublished }}</p>
+  <p style="font-family: Cambria; color: #2e2d5e">{{ post?.datePublished | date }}</p>
+
+
+  <button type="button" class="btn btn-default btn-sm" (click)="addLike()" style="
+    background-color: #2e2d5e;
+    color: #df5c50;
+    font-family: Cambria;
+    font-weight: 700;
+    font-size: 18px;
+    padding-inline: 17px;
+    padding-block: 4px;
+    margin-bottom: 6px;
+  ">
+      <span class="glyphicon glyphicon-thumbs-up"></span> Like ({{post?.numberOfLikes}})
+    </button>
   <button
     style="
       background-color: #2e2d5e;
@@ -24,6 +38,7 @@
       font-size: 18px;
       padding-inline: 17px;
       padding-block: 4px;
+      margin-left: 5px;
     "
     (click)="onEdit()"
   >

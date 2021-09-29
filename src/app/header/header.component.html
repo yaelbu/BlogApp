@@ -52,6 +52,33 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <a
+          (click)="onSave()"
+            style="
+              color: #df5c50;
+              font-weight: 500;
+              font-family: Cambria;
+              font-size: 20px;
+              cursor: pointer;
+            "
+            ><span class="glyphicon glyphicon-floppy-disk"></span> Save</a
+          >
+        </li>
+        <li>
+          <a
+          (click)="onFetch()"
+            style="
+              color: #df5c50;
+              font-weight: 500;
+              font-family: Cambria;
+              font-size: 20px;
+              cursor: pointer;
+            "
+            ><span class="glyphicon glyphicon-download"></span> Fetch</a
+          >
+        </li>
+
+        <li>
+          <a
             routerLink="auth"
             style="
               color: #df5c50;
